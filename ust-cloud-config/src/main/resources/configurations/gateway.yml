@@ -1,0 +1,22 @@
+eureka:
+  client:
+    register-with-eureka: false
+server:
+  port: 8222
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: Certificate-service-final
+          uri: http://localhost:8082
+          predicates:
+            - Path=/certificate/**
+        - id: Student-service-final
+          uri: http://localhost:8081
+          predicates:
+            - Path=/student/**

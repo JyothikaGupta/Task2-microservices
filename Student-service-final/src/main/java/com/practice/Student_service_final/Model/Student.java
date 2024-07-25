@@ -1,26 +1,30 @@
 package com.practice.Student_service_final.Model;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.SqlResultSetMapping;
+import com.practice.Student_service_final.client.Courses;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
+import java.util.List;
 
+@Entity
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name="student")
 public class Student {
     @Id
-    public Long id;
-    public String name;
-    public String course_enrolled;
-    public String course_title;
-    public boolean completed;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "student_id")
+    private int studentId;
+    @Column(name = "student_name")
+    private String studentName;
+
+
+
 
 
 }

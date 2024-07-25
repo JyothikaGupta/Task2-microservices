@@ -12,9 +12,14 @@ import java.util.List;
 
 @FeignClient(name="Student-service-final",url="http://localhost:8081/studentdetails")
 public interface StudentClient {
-    @GetMapping("/studentscertificates/{completed}")
-    List<Student> getStudentsByCourseCompletion(@PathVariable boolean completed);
 
-     @GetMapping("/getCompleted")
-    List<Student> findByCompleted(@RequestParam boolean completed);
+
+
+
+    @GetMapping("/studentname/{name}")
+    public String getStudentName(@PathVariable String name);
+
+
+    List<Student> findByCompleted(boolean completed);
+
 }

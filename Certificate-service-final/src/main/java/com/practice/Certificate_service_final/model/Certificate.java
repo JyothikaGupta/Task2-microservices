@@ -18,10 +18,9 @@ public class Certificate {
     public int certificateid;
 
     public String certificateName;
+    public String completed;
 
-    @ManyToOne
-    @JoinColumn(name="id")
-    private Student student;
-    private boolean completed;
+
+
 
 }

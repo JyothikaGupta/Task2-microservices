@@ -21,14 +21,5 @@ public class Student {
     @Id
     public Long id;
     public String name;
-    public String course_enrolled;
-    public String course_title;
-    public boolean completed;
-
-
-    public Student(Long id, String name, String course_title) {
-        this.id = id;
-        this.name = name;
-        this.course_title = course_title;
-    }
+    public String section;
 }

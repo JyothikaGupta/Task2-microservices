@@ -14,9 +14,10 @@ import java.util.ListIterator;
 @AllArgsConstructor
 @NoArgsConstructor
 public class FullResponse {
-    public int certificateid;
-    public String course_title;
-    public String certificateName;
-    public List<Student> student;
+    public Long id;
+    public String name;
+    public String section;
+    public Student student;
+
 
 }

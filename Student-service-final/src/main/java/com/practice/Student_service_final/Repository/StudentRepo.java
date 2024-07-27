@@ -19,7 +19,7 @@ public interface StudentRepo extends JpaRepository<Student, Integer> {
 //    Optional<Courses> findCoursesByStudentid(@Param("studentid") int studentid);
 
 
-    Student findByStudentId(int studentid);
+    Student findByStudentId(int studentId);
 
 
 }

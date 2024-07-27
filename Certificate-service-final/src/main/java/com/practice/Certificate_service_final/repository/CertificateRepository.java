@@ -1,6 +1,6 @@
 package com.practice.Certificate_service_final.repository;
 
-import com.practice.Certificate_service_final.client.Student;
+
 import com.practice.Certificate_service_final.model.Certificate;
 import org.springframework.data.jpa.repository.JpaRepository;
 

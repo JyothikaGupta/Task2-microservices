@@ -16,7 +16,7 @@ public class Payment {
     @Id
     public int paymentid;
     public int studentid;
-    public boolean paymentdone;
+    public boolean paymentDone;
 
 
 }

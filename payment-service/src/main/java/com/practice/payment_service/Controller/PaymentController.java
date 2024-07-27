@@ -24,10 +24,15 @@ public class PaymentController {
     public Payment addPaymentDetails(@RequestBody Payment payment) {
         return paymentService.addPaymentDetails(payment);
     }
-    @GetMapping("/paymentdetails/{studentid}")
-    public Payment getPaymentDetailsByStudentid(@PathVariable int studentid){
-        return paymentService.getPaymentDetailsByStudentid(studentid);
+//    @GetMapping("/paymentdetails/{studentid}")
+//    public Payment getPaymentDetailsByStudentid(@PathVariable int studentid){
+//        return paymentService.getPaymentDetailsByStudentid(studentid);
+//
+//    }
 
+    @GetMapping("/paymentstatus/{studentid}")
+    public boolean getPaymentStatus(@PathVariable int studentid){
+        return paymentService.isPaymentDone(studentid);
     }
 
 

@@ -11,3 +11,5 @@ public class ApiGatewayApplication {
 	}
 
 }
+//oath, jwt, auth
+//microservices

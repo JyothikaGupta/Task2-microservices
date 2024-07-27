@@ -12,6 +12,6 @@ import java.util.Optional;
 @FeignClient(name="course-details",url="http://localhost:9001/coursedetails")
 public interface CourseClient {
 
-    @GetMapping("/getcoursedetails/{studentid}")
-    public List<Courses> getcourses(@PathVariable int studentid);
+    @GetMapping("/getcoursedetails/{studentId}")
+    public List<Courses> getcourses(@PathVariable int studentId);
 }

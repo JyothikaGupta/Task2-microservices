@@ -9,7 +9,10 @@ import java.util.Optional;
 
 @FeignClient(name="payment-service",url="http://localhost:9003/paymentdetails")
 public interface PaymentClient {
-    @GetMapping("/paymentdetails/{studentid}")
+//    @GetMapping("/paymentdetails/{studentId}")
+//
+//    public Payment getPaymentDetailsByStudentid(@PathVariable int studentId);
 
-    public Payment getPaymentDetailsByStudentid(@PathVariable int studentid);
+    @GetMapping("/paymentstatus/{studentid}")
+    public boolean getPaymentStatus(@PathVariable int studentid);
 }

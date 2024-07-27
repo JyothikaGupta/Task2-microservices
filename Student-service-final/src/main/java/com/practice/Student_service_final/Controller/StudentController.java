@@ -3,12 +3,11 @@ package com.practice.Student_service_final.Controller;
 
 import com.practice.Student_service_final.Model.Student;
 import com.practice.Student_service_final.Service.StudentService;
-import com.practice.Student_service_final.client.Courses;
+import com.practice.Student_service_final.client.Certificate;
 import com.practice.Student_service_final.client.FullResponse;
-import com.practice.Student_service_final.client.Payment;
+import com.practice.Student_service_final.client.FullResponseCourses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,16 +32,20 @@ public class StudentController {
         return studentService.getStudent();
     }
 
-    @GetMapping("/getcoursedetails/{studentid}")
-    public ResponseEntity<FullResponse> getCourses(@PathVariable int studentid){
-        return ResponseEntity.ok(studentService.getCourses(studentid));
+    @GetMapping("/getcoursedetails/{studentId}")
+    public ResponseEntity<FullResponseCourses> getCourses(@PathVariable int studentId){
+        return ResponseEntity.ok(studentService.getCourses(studentId));
     }
 
-    @GetMapping("/paymentdetails/{studentid}")
-    public FullResponse getPaymentDetailsByStudentid(@PathVariable int studentid){
-        return studentService.getPaymentDetailsByStudentid(studentid);
-
+    @GetMapping("/paymentstatus/{studentid}")
+    public boolean getPaymentStatus(@PathVariable int studentid){
+        return studentService.getPaymentStatus(studentid);
     }
+    @GetMapping("/getcertificatedetails/{studentId}")
+    public ResponseEntity<FullResponse> getCertificatedetailsByStudentId(@PathVariable int studentId) {
+        return  ResponseEntity.ok(studentService.getCertificateByStudentId(studentId));
+    }
+
 
 
 

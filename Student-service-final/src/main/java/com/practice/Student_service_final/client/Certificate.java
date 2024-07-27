@@ -1,26 +1,16 @@
-package com.practice.Certificate_service_final.model;
+package com.practice.Student_service_final.client;
 
-
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@NoArgsConstructor
-@AllArgsConstructor
 @Data
-@Table(name="certificate")
-
+@AllArgsConstructor
+@NoArgsConstructor
 public class Certificate {
-    @Id
     public int studentId;
     public int certificateid;
 
     public String certificateName;
     public String completed;
-
-
-
-
 }

@@ -15,9 +15,9 @@ public class CourseController {
     @Autowired
     private CourseService courseService;
 
-    @GetMapping("/getcoursedetails/{studentid}")
-    public ResponseEntity<List<Courses>> getcourses(@PathVariable int studentid){
-        return ResponseEntity.ok(courseService.getCourses(studentid));
+    @GetMapping("/getcoursedetails/{studentId}")
+    public ResponseEntity<List<Courses>> getcourses(@PathVariable int studentId){
+        return ResponseEntity.ok(courseService.getCourses(studentId));
     }
 
 

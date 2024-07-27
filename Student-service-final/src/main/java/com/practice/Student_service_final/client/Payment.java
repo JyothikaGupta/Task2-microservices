@@ -12,4 +12,12 @@ public class Payment {
     public int paymentid;
     public int studentid;
     public boolean paymentdone;
+
+//    public boolean isPaymentdone() {
+//        return paymentdone;
+//    }
+//
+//    public void setPaymentdone(boolean paymentdone) {
+//        this.paymentdone = paymentdone;
+//    }
 }

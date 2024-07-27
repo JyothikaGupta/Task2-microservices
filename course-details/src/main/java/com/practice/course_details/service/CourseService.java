@@ -19,7 +19,9 @@ public class CourseService {
     public void addCourse(Courses course) {
         repo.save(course);
     }
-    public List<Courses> getCourses(int studentid){
-        return repo.findByStudentId(studentid);
+    public List<Courses> getCourses(int studentId)
+    {
+        System.out.print("c"+repo.findByStudentId(studentId));
+        return repo.findByStudentId(studentId);
     }
 }

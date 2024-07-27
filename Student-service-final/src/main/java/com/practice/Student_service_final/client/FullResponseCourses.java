@@ -5,21 +5,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
-
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 
-public class FullResponse {
-
+public class FullResponseCourses {
     private int studentId;
     private String studentName;
-//    private List<String> courses;
+    //    private List<String> courses;
     private List<Courses> courses;
-    private Payment payment;
-    private List<Certificate> certificate;
-
-
-
 
 }

@@ -25,7 +25,12 @@ public class PaymentService {
 
 
 
-    public Payment getPaymentDetailsByStudentid(int studentid) {
-        return paymentRepo.findPaymentDetailsByStudentid(studentid);
+//    public Payment getPaymentDetailsByStudentid(int studentid) {
+//        return paymentRepo.findPaymentDetailsByStudentid(studentid);
+//    }
+
+
+    public boolean isPaymentDone(int studentid) {
+        return paymentRepo.isPaymentDone(studentid);
     }
 }
